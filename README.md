@@ -27,7 +27,7 @@ The dataset for CRISPE has been tested on a subset derived from [FixExal](https:
 │   └── README.md
 ```
 
-## Procedure to fuzz the dataset using CRISPE
+## Procedure to predict the code coverage for given target program using CRISPE
 
 1. Clone the official github repository for CRISPE
 ```
