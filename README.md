@@ -30,7 +30,7 @@ The dataset for CRISPE has been tested on a subset derived from [FixExal](https:
 
 1. Clone the official github repository for CRISPE
 ```
-git clone [ttps://github.com/crispe-prompt-engineering/crispe]
+git clone https://github.com/crispe-prompt-engineering/crispe
 ```
 2. Add the necessary paths required for prompting woth crispe in model/pipeline.py
 3. Add the API keys and endpoints in model/gpt_interaction.py
