@@ -1,0 +1,53 @@
+Given a program, test case and the possible sets of statements that will be covered by the test case, you are to create a step by step reasoning to choose slowly eliminate the non-applicable set of statements based on the reasoning for the test case. 
+Refer to the examples below - 
+SAMPLE CODE - 
+Line 1: input_string = input("Enter a list of numbers, separated by commas: ")
+Line 2: numbers = [int(num) for num in input_string.split(',')]
+Line 3: for number in numbers:
+Line 4:     if number > 0:
+Line 5:         print(f"{number} is positive")
+Line 6:     elif number < 0:
+Line 7:         print(f"{number} is negative")
+Line 8:     else:
+Line 9:         print(f"{number} is zero")
+Line 10: print("End of program")
+
+Possible sets of code coverage - 
+1. Error
+2. Lines 1, 2, 3, 4, 5, 10
+3. Lines 1, 2, 3, 4, 6, 7, 9, 10
+4. Lines 1, 2, 3, 4, 6, 9, 10
+5. Lines 1, 2, 3, 4, 5, 6, 7, 10
+6. Lines 1, 2, 3, 4, 5, 9, 10
+7. Lines 1, 2, 3, 4, 6, 7, 10
+8. Lines 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+SAMPLE TEST CASE - 
+numbers = [7, -5]
+
+SAMPLE OUTPUT
+PLAN:
+Step 1: Input Processing: 
+The program starts with an input string that gets split into numbers based on commas. Since the test case directly provides the numbers [7, -5], we consider that lines 1 and 2 are executed to process this input.
+Observation 1: All sets of code coverage are applicable as they all include lines 1 and 2.
+Step 2: Looping through numbers:
+Given numbers are 7 and -5, which means the loop (line 3) will iterate twice.
+Observation 2: All sets of code coverage remain applicable as they all account for the loop's execution (line 3).
+Step 3: First Iteration with number = 7:
+For the first number (7), the condition in line 4 (if number > 0) is satisfied. Thus, line 5 will be executed, printing that 7 is positive.
+Observation 3: Sets 2, 5, 6, and 8 are applicable as they include lines 4 and 5.
+Step 4: Second Iteration with number = -5:
+For the second number (-5), the condition in line 4 is not satisfied, so the program will check the elif statement in line 6. Since -5 < 0, line 7 will be executed, printing that -5 is negative.
+Observation 4: Sets 5, 7, and 8 are applicable as they include lines 6 and 7.
+Step 5: End of Program:
+After iterating through all numbers, line 10 will be executed to print "End of program."
+Observation 5: Considering the previous observations, only sets that account for both positive and negative number checks and include line 10 are viable. This narrows down to sets 5, 7, and 8.
+Step 6: Zero Check:
+The test case does not include 0, so the else block (line 8) will not be executed. This eliminates set 8 which includes line 8 and 9.
+Observation 6: Sets 5 and 7 are applicable, but since there's no condition where a number equals zero, set 5 is the most accurate.
+
+FINAL CODE COVERAGE:
+Set 7: Lines 1, 2, 3, 4, 5, 6, 7, 10
+
+NOTE : Make sure to follow the same format to predict the code coverage. 
+In a similar fashion, create a step by step reasoning and choose the best set of statements that will be covered by the test case for the below program - 
