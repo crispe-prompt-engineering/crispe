@@ -19,7 +19,6 @@ The dataset for CRISPE has been tested on a subset derived from [FixExal](https:
 │   │    ├──gpt_interaction.py
 │   │    ├──focc.py
 │   │    ├──pipeline.py
-│   │    ├──utils.py
 │   ├── responses
 │   │    ├──crispe_responses.json
 │   │    ├──baseline_responses.json
