@@ -1,4 +1,5 @@
-[{
+[
+    {
     "submission_id": "s073295946",
     "serialized_code_tokens": "Line 1: from math import sin, cos, radians\nLine 2: cl = [0, 0]\nLine 3: cd = 0\nLine 4: while True:\nLine 5:     o = tuple(map(int, input().split(',')))\nLine 6:     if o == (0, 0):\nLine 7:         break\nLine 8:     cl[0] += o[0] * sin(radians(cd))\nLine 9:     cl[1] += o[0] * cos(radians(cd))\nLine 10:     cd += o[1]\nLine 11:     if 180 <= cd:\nLine 12:         cd -= 360\nLine 13:     elif cd <= -180:\nLine 14:         cd += 360\nLine 15: for x in cl:\nLine 16:     print(int(x))",
     "test_case_input_id": 1,
