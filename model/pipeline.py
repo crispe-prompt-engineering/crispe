@@ -2,6 +2,7 @@ import json
 import gpt_interaction
 import time
 
+
 def read_json_file(filename):
     """
     Reads JSON data from a file and returns it.
