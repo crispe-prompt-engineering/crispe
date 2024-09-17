@@ -1,1 +1,1 @@
-#used to prompt gpt - remove content before execution of code
+#remove content before execution of code
