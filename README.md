@@ -30,6 +30,6 @@ The dataset for CRISPE has been tested on a subset derived from [FixExal](https:
 ```
 git clone https://github.com/crispe-prompt-engineering/crispe
 ```
-2. Add the necessary paths required for prompting woth crispe in model/pipeline.py
+2. Add the necessary paths required for prompting with crispe in model/pipeline.py
 3. Add the API keys and endpoints in model/gpt_interaction.py
 4. Run the 'model/pipeline.py' file 
