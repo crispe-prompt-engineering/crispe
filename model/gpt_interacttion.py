@@ -3,7 +3,6 @@ import os, re, random
 from openai import AzureOpenAI
 from collections import Counter
 
-
 all_responses = []
 def ccp_chatgpt_interaction(prompt_path, max_iterations=10):
     client = AzureOpenAI(
